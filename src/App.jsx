@@ -71,10 +71,10 @@ const CALENDAR_DATA = {
     { day: 17, name: 'Pasaporte 19:00', type: 'training' },
     { day: 18, name: 'T. Pet. Específicas 17:00', type: 'special' },
     { day: 19, name: 'Pasaporte 16:00 / Online 20:00', type: 'multi' },
-    { day: 20, name: 'PEN 12:00', type: 'highlight' },
     { day: 24, name: 'Pasaporte 19:00', type: 'training' },
     { day: 25, name: 'Pasaporte 10:30', type: 'training' },
     { day: 26, name: 'Networking / Online 20:00', type: 'multi' },
+    { day: 27, name: 'PEM Online 11:00', type: 'pem' },
   ],
   3: [ // Abril
     { day: 1, name: 'Semana Santa', type: 'holiday' },
@@ -361,8 +361,7 @@ const HubApp = () => {
                           <span className={`text-[11px] font-black mb-1 ${cell.event ? 'text-[#cf202e]' : 'text-slate-400'}`}>{cell.day}</span>
                           {cell.event && (
                             <div className={`w-1.5 h-1.5 rounded-full ${
-                               cell.event.type === 'training' ? 'bg-[#cf202e]' : 
-                               cell.event.type === 'holiday' ? 'bg-green-500' :
+                               cell.event.type === 'pem' ? 'bg-orange-500' :
                                cell.event.type === 'highlight' ? 'bg-orange-500' : 'bg-slate-900'
                             }`}></div>
                           )}
@@ -388,6 +387,10 @@ const HubApp = () => {
                   <div className="flex items-center gap-2">
                      <div className="w-2 h-2 rounded-full bg-slate-900"></div>
                      <span className="text-[9px] font-black uppercase text-gray-400 tracking-widest">Eventos</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                     <div className="w-2 h-2 rounded-full bg-orange-500"></div>
+                     <span className="text-[9px] font-black uppercase text-gray-400 tracking-widest">PEM</span>
                   </div>
                </div>
             </div>
@@ -475,6 +478,19 @@ const HubApp = () => {
                    <ExternalLink size={16} className="text-gray-300 group-hover:text-[#cf202e] transition-colors" />
                 </a>
               ))}
+              
+              <a href="https://www.google.com/maps/search/PIBO,+Ed+Emporio,+Rda.+Sanl%C3%BAcar+la+Mayor,+1,+41110,+Sevilla,+Bollullos+de+la+Mitaci%C3%B3n/@37.3546883,-6.1441209,16z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDMxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-3xl hover:shadow-lg transition-all group">
+                   <div className="flex items-center gap-4 text-left">
+                      <div className="w-11 h-11 rounded-2xl bg-gray-50 text-gray-400 flex items-center justify-center group-hover:bg-orange-500/10 group-hover:text-orange-600 transition-all">
+                         <MapPin className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <span className="block font-black text-slate-800 text-sm">PEM presencial</span>
+                        <span className="text-[10px] text-slate-400 font-bold uppercase tracking-tight">Edificio Emporio Parque Industrial PIBO, 41110, Sevilla</span>
+                      </div>
+                   </div>
+                   <ExternalLink size={16} className="text-gray-300 group-hover:text-orange-600 transition-colors" />
+              </a>
             </div>
           </section>
 
