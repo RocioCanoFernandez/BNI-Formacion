@@ -246,6 +246,7 @@ const HubApp = () => {
   const [selectedMonth, setSelectedMonth] = useState(2); // Marzo por defecto
   const [selectedYear] = useState(2026);
   const [isSearching, setIsSearching] = useState(false);
+  const [activeDay, setActiveDay] = useState(null); // Para ver detalles en móvil
 
   // Lógica de Calendario Dinámico (Alineación corregida)
   const calendarCells = useMemo(() => {
@@ -264,8 +265,8 @@ const HubApp = () => {
     return cells;
   }, [selectedMonth, selectedYear]);
 
-  const nextMonth = () => setSelectedMonth((m) => (m + 1) % 12);
-  const prevMonth = () => setSelectedMonth((m) => (m - 1 + 12) % 12);
+  const nextMonth = () => { setSelectedMonth((m) => (m + 1) % 12); setActiveDay(null); };
+  const prevMonth = () => { setSelectedMonth((m) => (m - 1 + 12) % 12); setActiveDay(null); };
 
   return (
     <div className="min-h-screen bg-gray-50 text-slate-800 font-sans pb-12">
@@ -352,7 +353,8 @@ const HubApp = () => {
                   {calendarCells.map((cell, i) => (
                     <div 
                       key={i} 
-                      className={`aspect-square sm:aspect-auto sm:h-24 md:h-28 border border-gray-50 rounded-2xl p-2 relative group transition-all flex flex-col items-center justify-center ${
+                      onClick={() => cell.event && setActiveDay(activeDay === i ? null : i)}
+                      className={`aspect-square sm:aspect-auto sm:h-24 md:h-28 border border-gray-50 rounded-2xl p-2 relative group transition-all flex flex-col items-center justify-center cursor-pointer ${
                          cell.event ? 'bg-[#cf202e]/5 border-[#cf202e]/10' : 'bg-gray-50/20'
                       } ${!cell.day ? 'opacity-0 pointer-events-none' : 'hover:shadow-md'}`}
                     >
@@ -366,7 +368,9 @@ const HubApp = () => {
                             }`}></div>
                           )}
                           {cell.event && (
-                            <div className="absolute inset-0 bg-white/95 rounded-2xl flex flex-col items-center justify-center p-2 opacity-0 group-hover:opacity-100 transition-all border border-[#cf202e]/20 z-10">
+                            <div className={`absolute inset-0 bg-white/95 rounded-2xl flex flex-col items-center justify-center p-2 transition-all ${
+                                activeDay === i ? 'opacity-100 scale-100' : 'opacity-0 scale-95 lg:group-hover:opacity-100 lg:group-hover:scale-100 pointer-events-none lg:group-hover:pointer-events-auto'
+                             } border border-[#cf202e]/20 z-10`}>
                                <p className="text-[8px] font-black text-center text-slate-800 leading-tight uppercase">{cell.event.name}</p>
                             </div>
                           )}
