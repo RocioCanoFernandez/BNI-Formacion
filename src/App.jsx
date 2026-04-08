@@ -93,7 +93,7 @@ const CALENDAR_DATA = {
     { day: 16, name: 'Foro ONe / Pasaporte 16:00 / Online 20:00', type: 'multi' },
     { day: 21, name: 'T. 1a1 16:00 / Pasaporte 19:00', type: 'multi' },
     { day: 22, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 23, name: 'PEN 16:00 / Online 20:00', type: 'multi' },
+    { day: 23, name: 'PEN 16:00 / Online 20:00', type: 'pem' },
     { day: 28, name: 'T. Esferas / Pasaporte 19:00', type: 'multi' },
     { day: 30, name: 'Pasaporte 16:00 / Online 20:00', type: 'multi' },
   ],
@@ -243,7 +243,7 @@ const SectionTitle = ({ title, subtitle }) => (
 );
 
 const HubApp = () => {
-  const [selectedMonth, setSelectedMonth] = useState(2); // Marzo por defecto
+  const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth());
   const [selectedYear] = useState(2026);
   const [isSearching, setIsSearching] = useState(false);
   const [activeDay, setActiveDay] = useState(null); // Para ver detalles en móvil
