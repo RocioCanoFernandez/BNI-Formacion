@@ -361,9 +361,9 @@ const HubApp = () => {
                                    const evType = cell.event.type || "";
                                    
                                    const isHoliday = evType === 'holiday' || /Feria|Semana Santa|Pascua|Fiesta|Madre|Nacional|Navidad|Nochebuena|Nochevieja|Inmaculada|Constitución|Todos los Santos/i.test(evName);
-                                   const isTraining = /Pasaporte|Webinar|Formación/i.test(evName);
+                                   const isTraining = /Pasaporte|Webinar|Formación|Mentores/i.test(evName);
                                    const isPem = /PEM/i.test(evName);
-                                   const isEvent = /Connect|Mentores|Convención|Foro|EXPO|Global|Powercamp|Mod A|Market|Networking|DAS-CONECTA|Cena/i.test(evName) || (evType === 'highlight' && !isHoliday && !isTraining && !isPem && !/Mercado Obj/i.test(evName));
+                                   const isEvent = /Connect|Convención|Foro|EXPO|Global|Powercamp|Mod A|Market|Networking|DAS-CONECTA|Cena/i.test(evName) || (evType === 'highlight' && !isHoliday && !isTraining && !isPem && !/Mercado Obj/i.test(evName));
                                    
                                    let dots = [];
                                    if (isTraining) dots.push('bg-[#cf202e]'); // Rojo
