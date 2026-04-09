@@ -51,9 +51,9 @@ const PASAPORTE_LINKS = [
 
 const WEBINAR_LINK = {
   name: "Webinar Formación Canarias",
-  time: "Todos los jueves · 20:00h",
+  time: "Todos los jueves · 19:30h",
   url: "https://bnionline.zoom.us/j/6565739237?pwd=8pCDw2qtZy5x5NEisglph01iqXsLvX.1&omn=94411585737",
-  description: "Formación especializada todos los jueves a las 20:00"
+  description: "Formación especializada todos los jueves a las 19:30"
 };
 
 const EXTRA_LINKS = [
@@ -70,10 +70,10 @@ const CALENDAR_DATA = {
     { day: 12, name: 'T. Mercado Objetivo 12:00', type: 'special' },
     { day: 17, name: 'Pasaporte 19:00', type: 'training' },
     { day: 18, name: 'T. Pet. Específicas 17:00', type: 'special' },
-    { day: 19, name: 'Pasaporte 16:00 / Online 20:00', type: 'multi' },
+    { day: 19, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
     { day: 24, name: 'Pasaporte 19:00', type: 'training' },
     { day: 25, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 26, name: 'Networking / Online 20:00', type: 'multi' },
+    { day: 26, name: 'Webinar Canarias 19:30', type: 'multi' },
     { day: 27, name: 'PEM Online 11:00', type: 'pem' },
   ],
   3: [ // Abril
@@ -84,147 +84,125 @@ const CALENDAR_DATA = {
     { day: 5, name: 'Semana Santa', type: 'holiday' },
     { day: 6, name: 'Lunes de Pascua', type: 'holiday' },
     { day: 7, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 8, name: 'Pasaporte 10:30 / Connect 15:00', type: 'multi' },
-    { day: 9, name: 'Formación Online 20:00', type: 'special' },
+    { day: 8, name: 'Pasaporte 10:30', type: 'multi' },
+    { day: 9, name: 'Webinar Canarias 19:30', type: 'special' },
     { day: 10, name: 'Cert. Mentores 12:00', type: 'special' },
-    { day: 13, name: 'Reunión DyE 16:00', type: 'special' },
     { day: 14, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 15, name: 'Foro ONe / Mercado Obj. 12:00', type: 'multi' },
-    { day: 16, name: 'Foro ONe / Pasaporte 16:00 / Online 20:00', type: 'multi' },
-    { day: 21, name: 'T. 1a1 16:00 / Pasaporte 19:00', type: 'multi' },
+    { day: 15, name: 'Mercado Obj. 12:00', type: 'multi' },
+    { day: 16, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+    { day: 21, name: 'Pasaporte 19:00', type: 'multi' },
     { day: 22, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 23, name: 'PEN 16:00 / Online 20:00', type: 'pem' },
-    { day: 28, name: 'T. Esferas / Pasaporte 19:00', type: 'multi' },
-    { day: 30, name: 'Pasaporte 16:00 / Online 20:00', type: 'multi' },
+    { day: 23, name: 'PEM 16:00 / Webinar Canarias 19:30', type: 'pem' },
+    { day: 28, name: 'Pasaporte 19:00', type: 'multi' },
+    { day: 30, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
   ],
   4: [ // Mayo
     { day: 1, name: 'Fiesta del Trabajo', type: 'holiday' },
     { day: 3, name: 'Día de la Madre', type: 'holiday' },
     { day: 5, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 6, name: 'Pasaporte 10:30 / PEN 16:00', type: 'multi' },
-    { day: 7, name: 'T. Pet. Específicas / Online 20:00', type: 'multi' },
-    { day: 12, name: 'T. Ponencias / Pasaporte 19:00', type: 'multi' },
+    { day: 6, name: 'Pasaporte 10:30 / PEM 16:00', type: 'multi' },
+    { day: 7, name: 'Webinar Canarias 19:30', type: 'multi' },
+    { day: 12, name: 'Pasaporte 19:00', type: 'multi' },
     { day: 13, name: 'Cert. Mentores 16:00', type: 'special' },
-    { day: 14, name: 'Connect 12:00 / Pasaporte 16:00 / Online 20:00', type: 'multi' },
+    { day: 14, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
     { day: 19, name: 'Pasaporte 19:00', type: 'training' },
     { day: 20, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 21, name: 'Mercado Obj. 16:00 / Online 20:00', type: 'multi' },
+    { day: 21, name: 'Webinar Canarias 19:30', type: 'multi' },
     { day: 26, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 28, name: 'Convención Nal. / Pasaporte 16:00 / Online 20:00', type: 'multi' },
+    { day: 28, name: 'Convención Nal. / Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
     { day: 29, name: 'Convención Nacional', type: 'highlight' },
   ],
   5: [ // Junio
     { day: 2, name: 'Cert. Mentores 12:00 / Pasaporte 19:00', type: 'multi' },
-    { day: 3, name: 'Pasaporte 10:30 / PEN 12:00', type: 'multi' },
-    { day: 4, name: 'Formación Online 20:00', type: 'special' },
-    { day: 9, name: 'Connect 15:00 / Pasaporte 19:00', type: 'multi' },
-    { day: 10, name: 'Cert. Mentores 12:00 / T. 1a1 16:00', type: 'multi' },
-    { day: 11, name: 'Pasaporte 16:00 / Online 20:00', type: 'multi' },
-    { day: 12, name: 'DAS-CONECTA', type: 'highlight' },
+    { day: 3, name: 'Pasaporte 10:30 / PEM 12:00', type: 'multi' },
+    { day: 4, name: 'Webinar Canarias 19:30', type: 'special' },
+    { day: 9, name: 'Pasaporte 19:00', type: 'multi' },
+    { day: 10, name: 'Cert. Mentores 12:00', type: 'multi' },
+    { day: 11, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
     { day: 16, name: 'Pasaporte 19:00', type: 'training' },
     { day: 17, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 18, name: 'Formación Online 20:00', type: 'special' },
-    { day: 19, name: 'Foro ONe', type: 'highlight' },
+    { day: 18, name: 'Webinar Canarias 19:30', type: 'special' },
     { day: 23, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 25, name: 'Pasaporte 16:00 / Online 20:00', type: 'multi' },
-    { day: 30, name: 'T. Planif. Metas 16:00 / Pasaporte 19:00', type: 'multi' },
+    { day: 25, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+    { day: 30, name: 'Pasaporte 19:00', type: 'multi' },
   ],
   6: [ // Julio
     { day: 1, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 2, name: 'PEN 16:00 / Online 20:00', type: 'multi' },
+    { day: 2, name: 'PEM 16:00 / Webinar Canarias 19:30', type: 'multi' },
     { day: 7, name: 'Cert. Mentores 12:00 / Pasaporte 19:00', type: 'multi' },
-    { day: 8, name: 'BNI Connect 15:00', type: 'special' },
-    { day: 9, name: 'Mercado Obj. 12:00 / Pasaporte 16:00 / Online 20:00', type: 'multi' },
+    { day: 9, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
     { day: 14, name: 'Pasaporte 19:00', type: 'training' },
     { day: 15, name: 'Pasaporte 10:30 / Foro ONe Summer', type: 'multi' },
-    { day: 16, name: 'Foro ONe Summer / Online 20:00', type: 'multi' },
+    { day: 16, name: 'Foro ONe Summer / Webinar Canarias 19:30', type: 'multi' },
     { day: 17, name: 'Foro Summer Event LPA', type: 'highlight' },
     { day: 21, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 22, name: 'Taller Referencias', type: 'special' },
-    { day: 23, name: 'Pasaporte 16:00 / Online 20:00', type: 'multi' },
-    { day: 24, name: 'Somos BNI', type: 'highlight' },
-    { day: 28, name: 'T. 1a1 16:00 / Pasaporte 19:00', type: 'multi' },
+    { day: 23, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+    { day: 28, name: 'Pasaporte 19:00', type: 'multi' },
     { day: 29, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 30, name: 'Formación Online 20:00', type: 'special' },
+    { day: 30, name: 'Webinar Canarias 19:30', type: 'special' },
   ],
   7: [ // Agosto
-    { day: 4, name: 'PEN Online 16:00 / Pasaporte 19:00', type: 'multi' },
-    { day: 6, name: 'Pasaporte 16:00 / Online 20:00', type: 'multi' },
-    { day: 13, name: 'Formación Online 20:00', type: 'special' },
-    { day: 20, name: 'Formación Online 20:00', type: 'special' },
+    { day: 4, name: 'PEM Online 16:00 / Pasaporte 19:00', type: 'multi' },
+    { day: 6, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+    { day: 13, name: 'Webinar Canarias 19:30', type: 'special' },
+    { day: 20, name: 'Webinar Canarias 19:30', type: 'special' },
     { day: 25, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 26, name: 'Pasaporte 10:30 / Taller Pet.', type: 'multi' },
-    { day: 27, name: 'Formación Online 20:00', type: 'special' },
-    { day: 31, name: 'Somos BNI 15:30', type: 'highlight' },
-  ],
+    { day: 26, name: 'Pasaporte 10:30', type: 'multi' },
+    { day: 27, name: 'Webinar Canarias 19:30', type: 'special' },
+    ],
   8: [ // Septiembre
     { day: 1, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 3, name: 'Pasaporte 16:00 / Online 20:00', type: 'multi' },
-    { day: 8, name: 'PEN 16:00 / Pasaporte 19:00', type: 'multi' },
+    { day: 3, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+    { day: 8, name: 'PEM 16:00 / Pasaporte 19:00', type: 'multi' },
     { day: 9, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 10, name: 'Networking / Online 20:00', type: 'multi' },
-    { day: 15, name: 'Connect 15:00 / Pasaporte 19:00', type: 'multi' },
-    { day: 17, name: 'Pasaporte 16:00 / Online 20:00', type: 'multi' },
-    { day: 18, name: 'Somos BNI', type: 'highlight' },
-    { day: 22, name: 'Mercado Obj. 16:00 / Pasaporte 19:00', type: 'multi' },
+    { day: 10, name: 'Webinar Canarias 19:30', type: 'multi' },
+    { day: 15, name: 'Pasaporte 19:00', type: 'multi' },
+    { day: 17, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+    { day: 22, name: 'Pasaporte 19:00', type: 'multi' },
     { day: 23, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 24, name: 'Formación Online 20:00', type: 'special' },
-    { day: 28, name: 'Somos BNI 15:30', type: 'highlight' },
-    { day: 29, name: 'Taller 1a1 16:00 / Pasaporte 19:00', type: 'multi' },
+    { day: 24, name: 'Webinar Canarias 19:30', type: 'special' },
+    { day: 29, name: 'Pasaporte 19:00', type: 'multi' },
   ],
   9: [ // Octubre
     { day: 1, name: 'EXPO BNI / Pasaporte / Online', type: 'multi' },
     { day: 2, name: 'EXPO BNI (LVS, ANDOCC)', type: 'highlight' },
     { day: 6, name: 'Pasaporte 19:00', type: 'training' },
     { day: 7, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 8, name: 'Tally Pet. / Online 20:00', type: 'multi' },
+    { day: 8, name: 'Webinar Canarias 19:30', type: 'multi' },
     { day: 12, name: 'Fiesta Nacional', type: 'holiday' },
-    { day: 13, name: 'Connect 12:00 / Pasaporte 19:00', type: 'multi' },
-    { day: 14, name: 'Ponencias Especiales', type: 'special' },
-    { day: 15, name: 'Pasaporte 16:00 / Online 20:00', type: 'multi' },
-    { day: 16, name: 'EXPO BNI', type: 'highlight' },
+    { day: 13, name: 'Pasaporte 19:00', type: 'multi' },
+    { day: 15, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
     { day: 20, name: 'Pasaporte 19:00', type: 'training' },
     { day: 21, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 22, name: 'Formación Online 20:00', type: 'special' },
-    { day: 23, name: 'EXPO BNI', type: 'highlight' },
-    { day: 27, name: 'ND Summit / Pasaporte 19:00', type: 'multi' },
-    { day: 28, name: 'Global Con.', type: 'highlight' },
+    { day: 22, name: 'Webinar Canarias 19:30', type: 'special' },
+    { day: 27, name: 'Pasaporte 19:00', type: 'multi' },
     { day: 29, name: 'Global Con. / Pasaporte / Online', type: 'multi' },
-    { day: 30, name: 'Global Con. / Mercado Obj.', type: 'multi' },
+    
   ],
   10: [ // Noviembre
     { day: 1, name: 'Todos los Santos', type: 'holiday' },
-    { day: 2, name: 'Somos BNI 15:30', type: 'highlight' },
-    { day: 3, name: 'PEN 16:00 / Pasaporte 19:00', type: 'multi' },
+    { day: 3, name: 'PEM 16:00 / Pasaporte 19:00', type: 'multi' },
     { day: 4, name: 'Pasaporte 10:30 / Cert. Mentores', type: 'multi' },
-    { day: 5, name: 'Formación Online 20:00', type: 'special' },
-    { day: 6, name: 'EXPO CAT', type: 'highlight' },
-    { day: 10, name: 'Connect 15:00 / Pasaporte 19:00', type: 'multi' },
-    { day: 11, name: 'Taller 1a1 16:00', type: 'special' },
-    { day: 12, name: 'Pasaporte 16:00 / Online 20:00', type: 'multi' },
-    { day: 13, name: 'Cena de Gala BNI', type: 'highlight' },
-    { day: 17, name: 'T. Pet / Pasaporte 19:00', type: 'multi' },
+    { day: 5, name: 'Webinar Canarias 19:30', type: 'special' },
+    { day: 10, name: 'Pasaporte 19:00', type: 'multi' },
+    { day: 12, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+    { day: 17, name: 'Pasaporte 19:00', type: 'multi' },
     { day: 18, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 19, name: 'Cena de Gala / Online 20:00', type: 'multi' },
-    { day: 20, name: 'Cena de Gala BNI', type: 'highlight' },
+    { day: 19, name: 'Webinar Canarias 19:30', type: 'multi' },
     { day: 24, name: 'Mod A / Pasaporte 19:00', type: 'multi' },
-    { day: 25, name: 'Taller Esferas 16:00', type: 'special' },
     { day: 26, name: 'Powercamp / Pasaporte / Online', type: 'multi' },
-    { day: 27, name: 'Somos BNI Powercamp', type: 'highlight' },
-  ],
+    ],
   11: [ // Diciembre
     { day: 1, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 2, name: 'Pasaporte 10:30 / PEN 16:00', type: 'multi' },
-    { day: 3, name: 'Formación Online 20:00', type: 'special' },
-    { day: 4, name: 'Cena de Gala BNI', type: 'highlight' },
+    { day: 2, name: 'Pasaporte 10:30 / PEM 16:00', type: 'multi' },
+    { day: 3, name: 'Webinar Canarias 19:30', type: 'special' },
     { day: 6, name: 'Día de la Constitución', type: 'holiday' },
     { day: 8, name: 'Inmaculada Concepción', type: 'holiday' },
-    { day: 9, name: 'Connect 12:00 / Mercado Obj.', type: 'multi' },
-    { day: 10, name: 'Pasaporte 16:00 / Online 20:00', type: 'multi' },
-    { day: 14, name: 'Somos BNI 15:30', type: 'highlight' },
+    { day: 9, name: 'Mercado Obj.', type: 'multi' },
+    { day: 10, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
     { day: 15, name: 'Cert. Mentores', type: 'special' },
     { day: 16, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 17, name: 'Formación Online 20:00', type: 'special' },
+    { day: 17, name: 'Webinar Canarias 19:30', type: 'special' },
     { day: 18, name: 'Cena de empresa', type: 'highlight' },
     { day: 22, name: 'Pasaporte 19:00', type: 'training' },
     { day: 24, name: 'Nochebuena', type: 'holiday' },
@@ -243,6 +221,19 @@ const SectionTitle = ({ title, subtitle }) => (
 );
 
 const HubApp = () => {
+  const handleCopyLink = (e, url) => {
+    e.preventDefault();
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(() => {
+        alert("Enlace copiado al portapapeles: " + url);
+      }).catch(() => {
+        alert("No se pudo copiar el enlace automáticamente.");
+      });
+    } else {
+      prompt("Copia este enlace:", url);
+    }
+  };
+
   const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth());
   const [selectedYear] = useState(2026);
   const [isSearching, setIsSearching] = useState(false);
@@ -363,8 +354,7 @@ const HubApp = () => {
                           <span className={`text-[11px] font-black mb-1 ${cell.event ? 'text-[#cf202e]' : 'text-slate-400'}`}>{cell.day}</span>
                           {cell.event && (
                             <div className={`w-1.5 h-1.5 rounded-full ${
-                               cell.event.type === 'pem' ? 'bg-orange-500' :
-                               cell.event.type === 'highlight' ? 'bg-orange-500' : 'bg-slate-900'
+                               cell.event.type === 'pem' ? 'bg-orange-500' : (typeof cell.event.name === 'string' && cell.event.name.includes('PEM')) ? 'bg-orange-500' : 'bg-slate-900'
                             }`}></div>
                           )}
                           {cell.event && (
@@ -419,7 +409,7 @@ const HubApp = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {PASAPORTE_LINKS.map((link, idx) => (
-                  <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="flex flex-col gap-3 p-5 bg-gray-50 hover:bg-red-50 rounded-3xl transition-all group border border-transparent hover:border-red-100 text-left">
+                  <a key={idx} href={link.url} onClick={(e) => handleCopyLink(e, link.url)} className="cursor-copy flex flex-col gap-3 p-5 bg-gray-50 hover:bg-red-50 rounded-3xl transition-all group border border-transparent hover:border-red-100 text-left">
                      <span className="text-[10px] font-black text-[#cf202e] uppercase tracking-widest">{link.frequency}</span>
                      <h4 className="font-black text-slate-800 text-lg group-hover:text-[#cf202e] transition-colors">{link.name}</h4>
                      <div className="mt-auto flex items-center justify-between">
@@ -442,7 +432,7 @@ const HubApp = () => {
           {/* WEBINAR DESTACADO */}
           <section id="webinar">
             <SectionTitle title="Webinar Jueves" />
-            <a href={WEBINAR_LINK.url} target="_blank" rel="noopener noreferrer" className="group relative block bg-[#cf202e] rounded-[2.5rem] p-8 lg:p-10 shadow-xl hover:-translate-y-1 transition-all">
+            <a href={WEBINAR_LINK.url} onClick={(e) => handleCopyLink(e, WEBINAR_LINK.url)} className="cursor-copy group relative block bg-[#cf202e] rounded-[2.5rem] p-8 lg:p-10 shadow-xl hover:-translate-y-1 transition-all">
                <div className="relative z-10 flex flex-col gap-6">
                   <div className="flex justify-between items-start">
                      <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
@@ -472,7 +462,7 @@ const HubApp = () => {
             <SectionTitle title="Recursos Externos" />
             <div className="grid grid-cols-1 gap-3">
               {EXTRA_LINKS.map((link, idx) => (
-                <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-3xl hover:shadow-lg transition-all group">
+                <a key={idx} href={link.url} onClick={(e) => handleCopyLink(e, link.url)} className="cursor-copy flex items-center justify-between p-5 bg-white border border-gray-100 rounded-3xl hover:shadow-lg transition-all group">
                    <div className="flex items-center gap-4 text-left">
                       <div className="w-11 h-11 rounded-2xl bg-gray-50 text-gray-400 flex items-center justify-center group-hover:bg-[#cf202e]/10 group-hover:text-[#cf202e] transition-all">
                          {link.icon}
@@ -483,7 +473,7 @@ const HubApp = () => {
                 </a>
               ))}
               
-              <a href="https://www.google.com/maps/search/PIBO,+Ed+Emporio,+Rda.+Sanl%C3%BAcar+la+Mayor,+1,+41110,+Sevilla,+Bollullos+de+la+Mitaci%C3%B3n/@37.3546883,-6.1441209,16z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDMxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-5 bg-white border border-gray-100 rounded-3xl hover:shadow-lg transition-all group">
+              <a href="https://www.google.com/maps/search/PIBO,+Ed+Emporio,+Rda.+Sanl%C3%BAcar+la+Mayor,+1,+41110,+Sevilla,+Bollullos+de+la+Mitaci%C3%B3n/@37.3546883,-6.1441209,16z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDMxNS4wIKXMDSoASAFQAw%3D%3D" onClick={(e) => handleCopyLink(e, "https://www.google.com/maps/search/PIBO,+Ed+Emporio,+Rda.+Sanl%C3%BAcar+la+Mayor,+1,+41110,+Sevilla,+Bollullos+de+la+Mitaci%C3%B3n/@37.3546883,-6.1441209,16z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDMxNS4wIKXMDSoASAFQAw%3D%3D")} className="cursor-copy flex items-center justify-between p-5 bg-white border border-gray-100 rounded-3xl hover:shadow-lg transition-all group">
                    <div className="flex items-center gap-4 text-left">
                       <div className="w-11 h-11 rounded-2xl bg-gray-50 text-gray-400 flex items-center justify-center group-hover:bg-orange-500/10 group-hover:text-orange-600 transition-all">
                          <MapPin className="w-5 h-5" />
