@@ -88,11 +88,14 @@ const CALENDAR_DATA = {
     { day: 9, name: 'Webinar Canarias 19:30', type: 'special' },
     { day: 10, name: 'Cert. Mentores 12:00', type: 'special' },
     { day: 14, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 15, name: 'Mercado Obj. 12:00', type: 'multi' },
     { day: 16, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 21, name: 'Pasaporte 19:00', type: 'multi' },
-    { day: 22, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 23, name: 'PEM 16:00 / Webinar Canarias 19:30', type: 'pem' },
+    { day: 20, name: 'PEM 16:00 / FERIA', type: 'pem' },
+    { day: 21, name: 'Pasaporte 19:00 / FERIA', type: 'multi' },
+    { day: 22, name: 'Pasaporte 10:30 / FERIA', type: 'training' },
+    { day: 23, name: 'Webinar Canarias 19:30 / FERIA', type: 'pem' },
+    { day: 24, name: 'FERIA', type: 'holiday' },
+    { day: 25, name: 'FERIA', type: 'holiday' },
+    { day: 26, name: 'FERIA', type: 'holiday' },
     { day: 28, name: 'Pasaporte 19:00', type: 'multi' },
     { day: 30, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
   ],
@@ -149,7 +152,7 @@ const CALENDAR_DATA = {
     { day: 25, name: 'Pasaporte 19:00', type: 'training' },
     { day: 26, name: 'Pasaporte 10:30', type: 'multi' },
     { day: 27, name: 'Webinar Canarias 19:30', type: 'special' },
-    ],
+  ],
   8: [ // Septiembre
     { day: 1, name: 'Pasaporte 19:00', type: 'training' },
     { day: 3, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
@@ -164,8 +167,9 @@ const CALENDAR_DATA = {
     { day: 29, name: 'Pasaporte 19:00', type: 'multi' },
   ],
   9: [ // Octubre
-    { day: 1, name: 'EXPO BNI / Pasaporte / Online', type: 'multi' },
+    { day: 1, name: 'EXPO BNI / Pasaporte 19:00 / Online', type: 'multi' },
     { day: 2, name: 'EXPO BNI (LVS, ANDOCC)', type: 'highlight' },
+    { day: 5, name: 'PEM 16:00', type: 'pem' },
     { day: 6, name: 'Pasaporte 19:00', type: 'training' },
     { day: 7, name: 'Pasaporte 10:30', type: 'training' },
     { day: 8, name: 'Webinar Canarias 19:30', type: 'multi' },
@@ -176,8 +180,7 @@ const CALENDAR_DATA = {
     { day: 21, name: 'Pasaporte 10:30', type: 'training' },
     { day: 22, name: 'Webinar Canarias 19:30', type: 'special' },
     { day: 27, name: 'Pasaporte 19:00', type: 'multi' },
-    { day: 29, name: 'Global Con. / Pasaporte / Online', type: 'multi' },
-    
+    { day: 29, name: 'Global Con. Pasaporte 16:00', type: 'multi' },
   ],
   10: [ // Noviembre
     { day: 1, name: 'Todos los Santos', type: 'holiday' },
@@ -190,25 +193,23 @@ const CALENDAR_DATA = {
     { day: 18, name: 'Pasaporte 10:30', type: 'training' },
     { day: 19, name: 'Webinar Canarias 19:30', type: 'multi' },
     { day: 24, name: 'Mod A / Pasaporte 19:00', type: 'multi' },
-    { day: 26, name: 'Powercamp / Pasaporte / Online', type: 'multi' },
-    ],
+    { day: 26, name: 'Powercamp Pasaporte 16:00', type: 'multi' },
+  ],
   11: [ // Diciembre
     { day: 1, name: 'Pasaporte 19:00', type: 'training' },
     { day: 2, name: 'Pasaporte 10:30 / PEM 16:00', type: 'multi' },
     { day: 3, name: 'Webinar Canarias 19:30', type: 'special' },
     { day: 6, name: 'Día de la Constitución', type: 'holiday' },
     { day: 8, name: 'Inmaculada Concepción', type: 'holiday' },
-    { day: 9, name: 'Mercado Obj.', type: 'multi' },
     { day: 10, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
     { day: 15, name: 'Cert. Mentores', type: 'special' },
     { day: 16, name: 'Pasaporte 10:30', type: 'training' },
     { day: 17, name: 'Webinar Canarias 19:30', type: 'special' },
-    { day: 18, name: 'Cena de empresa', type: 'highlight' },
     { day: 22, name: 'Pasaporte 19:00', type: 'training' },
     { day: 24, name: 'Nochebuena', type: 'holiday' },
     { day: 25, name: 'Navidad', type: 'holiday' },
     { day: 31, name: 'Nochevieja', type: 'holiday' },
-  ]
+  ],
 };
 
 // --- COMPONENTES ---
@@ -352,11 +353,36 @@ const HubApp = () => {
                       {cell.day && (
                         <>
                           <span className={`text-[11px] font-black mb-1 ${cell.event ? 'text-[#cf202e]' : 'text-slate-400'}`}>{cell.day}</span>
+                          
                           {cell.event && (
-                            <div className={`w-1.5 h-1.5 rounded-full ${
-                               cell.event.type === 'pem' ? 'bg-orange-500' : (typeof cell.event.name === 'string' && cell.event.name.includes('PEM')) ? 'bg-orange-500' : 'bg-slate-900'
-                            }`}></div>
+                            <div className="flex gap-1 justify-center mt-1">
+                                {(() => {
+                                   const evName = cell.event.name || "";
+                                   const evType = cell.event.type || "";
+                                   
+                                   const isHoliday = evType === 'holiday' || /Feria|Semana Santa|Pascua|Fiesta|Madre|Nacional|Navidad|Nochebuena|Nochevieja|Inmaculada|Constitución|Todos los Santos/i.test(evName);
+                                   const isTraining = /Pasaporte|Webinar|Formación/i.test(evName);
+                                   const isPem = /PEM/i.test(evName);
+                                   const isEvent = /Connect|Mentores|Convención|Foro|EXPO|Global|Powercamp|Mod A|Market|Networking|DAS-CONECTA|Cena/i.test(evName) || (evType === 'highlight' && !isHoliday && !isTraining && !isPem && !/Mercado Obj/i.test(evName));
+                                   
+                                   let dots = [];
+                                   if (isTraining) dots.push('bg-[#cf202e]'); // Rojo
+                                   if (isHoliday) dots.push('bg-green-500'); // Verde
+                                   if (isEvent) dots.push('bg-slate-900'); // Negro
+                                   if (isPem) dots.push('bg-orange-500'); // Naranja
+                                   
+                                   if (dots.length === 0) {
+                                      if (evType === 'pem') dots.push('bg-orange-500');
+                                      else dots.push('bg-slate-900');
+                                   }
+                                   
+                                   return dots.map((col, idx) => (
+                                     <div key={idx} className={`w-1.5 h-1.5 rounded-full ${col}`}></div>
+                                   ));
+                                })()}
+                            </div>
                           )}
+
                           {cell.event && (
                             <div className={`absolute inset-0 bg-white/95 rounded-2xl flex flex-col items-center justify-center p-2 transition-all ${
                                 activeDay === i ? 'opacity-100 scale-100' : 'opacity-0 scale-95 lg:group-hover:opacity-100 lg:group-hover:scale-100 pointer-events-none lg:group-hover:pointer-events-auto'
