@@ -536,13 +536,69 @@ const HubApp = () => {
       </main>
 
       {/* Footer SeviAI Ecosystem */}
-      <footer style={{ marginTop: '2rem', padding: '0 2rem 2rem 2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', opacity: 0.8, transition: 'opacity 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '1'} onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}>
-        <p style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.2em', fontWeight: '500', color: 'rgba(0,0,0,0.8)', textAlign: 'center', marginBottom: '1rem', margin: 0, paddingBottom: '16px' }}>
+      <footer className="seviai-footer-container">
+        <style>{`
+          .seviai-footer-container {
+            margin-top: 3rem;
+            padding: 0 2rem 2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0.9;
+          }
+          .seviai-footer-copyright {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            color: rgba(0,0,0,0.5);
+            text-align: center;
+            margin: 0 0 1.25rem 0;
+          }
+          .seviai-footer-link {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 800;
+            color: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 10px 16px;
+          }
+          .seviai-footer-logo {
+            height: 20px;
+            width: auto;
+            opacity: 0.7;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+          }
+          @media (hover: hover) {
+            .seviai-footer-link:hover {
+              color: #DCAE56;
+            }
+            .seviai-footer-link:hover .seviai-footer-logo {
+              opacity: 1;
+              filter: grayscale(0%);
+            }
+          }
+          .seviai-footer-link:active {
+            color: #DCAE56;
+          }
+          .seviai-footer-link:active .seviai-footer-logo {
+            opacity: 1;
+            filter: grayscale(0%);
+          }
+        `}</style>
+        <p className="seviai-footer-copyright">
           © 2026 BNI Andalucía Occidental
         </p>
-        <a href="https://www.seviai.es/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.2em', fontWeight: 'bold', color: 'rgba(0,0,0,0.7)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', textDecoration: 'none', transition: 'color 0.3s ease' }} onMouseEnter={(e) => { e.currentTarget.style.color = '#DCAE56'; if(e.currentTarget.querySelector('img')) e.currentTarget.querySelector('img').style.opacity = '1'; }} onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(0,0,0,0.7)'; if(e.currentTarget.querySelector('img')) e.currentTarget.querySelector('img').style.opacity = '0.7'; }}>
+        <a href="https://www.seviai.es/" target="_blank" rel="noopener noreferrer" className="seviai-footer-link">
           SeviAI Ecosystem
-          <img src="/logo_sin_fondo.png" alt="SeviAI" style={{ height: '16px', width: 'auto', opacity: 0.7, filter: 'grayscale(100%)', transition: 'opacity 0.3s ease' }} />
+          <img src="/logo_sin_fondo.png" alt="SeviAI" className="seviai-footer-logo" />
         </a>
       </footer>
 
