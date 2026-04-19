@@ -535,13 +535,15 @@ const HubApp = () => {
         </div>
       </main>
 
-      <footer className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-8 border-t border-gray-100 mt-12">
-         <div className="flex items-center gap-4 grayscale opacity-40">
-            <img src="/logo_sin_fondo.png" alt="" className="h-8" />
-            <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest text-center">
-               &copy; 2026 BNI Andalucía Occidental · SeviAI Ecosystem
-            </p>
-         </div>
+      {/* Footer SeviAI Ecosystem */}
+      <footer style={{ marginTop: '2rem', padding: '0 2rem 2rem 2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', opacity: 0.8, transition: 'opacity 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '1'} onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}>
+        <p style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.2em', fontWeight: '500', color: 'rgba(0,0,0,0.8)', textAlign: 'center', marginBottom: '1rem', margin: 0, paddingBottom: '16px' }}>
+          © 2026 BNI Andalucía Occidental
+        </p>
+        <a href="https://www.seviai.es/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.2em', fontWeight: 'bold', color: 'rgba(0,0,0,0.7)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', textDecoration: 'none', transition: 'color 0.3s ease' }} onMouseEnter={(e) => { e.currentTarget.style.color = '#DCAE56'; if(e.currentTarget.querySelector('img')) e.currentTarget.querySelector('img').style.opacity = '1'; }} onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(0,0,0,0.7)'; if(e.currentTarget.querySelector('img')) e.currentTarget.querySelector('img').style.opacity = '0.7'; }}>
+          SeviAI Ecosystem
+          <img src="/logo_sin_fondo.png" alt="SeviAI" style={{ height: '16px', width: 'auto', opacity: 0.7, filter: 'grayscale(100%)', transition: 'opacity 0.3s ease' }} />
+        </a>
       </footer>
 
     </div>
