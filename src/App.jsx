@@ -56,6 +56,13 @@ const WEBINAR_LINK = {
   description: "Formación especializada todos los jueves a las 19:30"
 };
 
+const ENRIQUE_LINK = {
+  name: "Taller Enrique Guerra",
+  time: "Dos lunes al mes · 19:00h",
+  url: "https://bnionline.zoom.us/j/9305071108?omn=95158095938",
+  description: "Dos lunes de cada mes, oficina Andalucía Occidental imparte un taller."
+};
+
 const EXTRA_LINKS = [
   { name: "Eventos Nacionales", url: "https://bniespanaslc.com/es/eventos", icon: <CalendarIcon className="w-4 h-4" /> },
   { name: "Eventos Regionales", url: "https://bniespanaslc.com/es/eventos", icon: <MapPin className="w-4 h-4" /> },
@@ -102,14 +109,16 @@ const CALENDAR_DATA = {
   4: [ // Mayo
     { day: 1, name: 'Fiesta del Trabajo', type: 'holiday' },
     { day: 3, name: 'Día de la Madre', type: 'holiday' },
+    { day: 4, name: 'Taller Mercado Objetivo 19:00', type: 'training' },
     { day: 5, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 6, name: 'Pasaporte 10:30 / PEM 16:00', type: 'multi' },
+    { day: 6, name: 'Pasaporte 10:30', type: 'training' },
     { day: 7, name: 'Webinar Canarias 19:30', type: 'multi' },
     { day: 12, name: 'Pasaporte 19:00', type: 'multi' },
     { day: 13, name: 'Cert. Mentores 16:00', type: 'special' },
     { day: 14, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+    { day: 18, name: 'Taller Cómo Invitar 19:00', type: 'training' },
     { day: 19, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 20, name: 'Pasaporte 10:30', type: 'training' },
+    { day: 20, name: 'Pasaporte 10:30 / PEM Presencial 18:00', type: 'multi' },
     { day: 21, name: 'Webinar Canarias 19:30', type: 'multi' },
     { day: 26, name: 'Pasaporte 19:00', type: 'training' },
     { day: 28, name: 'Convención Nal. / Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
@@ -361,7 +370,7 @@ const HubApp = () => {
                                    const evType = cell.event.type || "";
                                    
                                    const isHoliday = evType === 'holiday' || /Feria|Semana Santa|Pascua|Fiesta|Madre|Nacional|Navidad|Nochebuena|Nochevieja|Inmaculada|Constitución|Todos los Santos/i.test(evName);
-                                   const isTraining = /Pasaporte|Webinar|Formación|Mentores/i.test(evName);
+                                   const isTraining = /Pasaporte|Webinar|Formación|Mentores|Taller/i.test(evName);
                                    const isPem = /PEM/i.test(evName);
                                    const isEvent = /Connect|Convención|Foro|EXPO|Global|Powercamp|Mod A|Market|Networking|DAS-CONECTA|Cena/i.test(evName) || (evType === 'highlight' && !isHoliday && !isTraining && !isPem && !/Mercado Obj/i.test(evName));
                                    
@@ -479,6 +488,34 @@ const HubApp = () => {
                </div>
                <div className="absolute top-0 right-0 p-10 opacity-10 pointer-events-none">
                   <MonitorPlay className="w-40 h-40 text-white" />
+               </div>
+            </a>
+          </section>
+
+          {/* TALLER ENRIQUE GUERRA */}
+          <section id="taller-enrique" className="mt-8">
+            <SectionTitle title="Taller Enrique Guerra" />
+            <a href={ENRIQUE_LINK.url} onClick={(e) => handleCopyLink(e, ENRIQUE_LINK.url)} className="cursor-copy group relative block bg-slate-900 rounded-[2.5rem] p-8 lg:p-10 shadow-xl hover:-translate-y-1 transition-all">
+               <div className="relative z-10 flex flex-col gap-6">
+                  <div className="flex justify-between items-start">
+                     <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                        <Users className="w-8 h-8" />
+                     </div>
+                     <span className="px-3 py-1 bg-white/10 text-white text-[9px] font-black tracking-widest uppercase rounded-full">Formación</span>
+                  </div>
+                  <div className="text-left">
+                     <h3 className="text-white font-black text-2xl mb-1">{ENRIQUE_LINK.name}</h3>
+                     <p className="text-white/70 text-sm font-medium">{ENRIQUE_LINK.description}</p>
+                  </div>
+                  <div className="flex items-center justify-between pt-4 border-t border-white/10">
+                     <div className="flex items-center gap-2 text-white font-black text-xs uppercase tracking-widest">
+                        <Clock size={14} className="text-white/50" /> {ENRIQUE_LINK.time}
+                     </div>
+                     <ArrowRight className="text-white group-hover:translate-x-1 transition-transform" />
+                  </div>
+               </div>
+               <div className="absolute top-0 right-0 p-10 opacity-10 pointer-events-none">
+                  <Users className="w-40 h-40 text-white" />
                </div>
             </a>
           </section>
