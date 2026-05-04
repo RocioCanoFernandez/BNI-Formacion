@@ -63,6 +63,13 @@ const ENRIQUE_LINK = {
   description: "Dos lunes de cada mes, oficina Andalucía Occidental imparte un taller."
 };
 
+const CHAT_GPT_LINK = {
+  name: "CHAT GPT – Apoyo a Miembros",
+  time: "Lunes 11 | 18:00 a 20:00",
+  url: "https://bnionline.zoom.us/j/9305071108?omn=98168426539",
+  description: "Formación práctica para descubrir cómo utilizar el GPT personalizado de ChatGPT creado para ayudar a los miembros de BNI en su día a día. Veremos cómo puede apoyarles en la preparación de presentaciones semanales, la definición de su mercado objetivo, la búsqueda de 1 a 1 estratégicos, la mejora de su visibilidad y la resolución de dudas frecuentes."
+};
+
 const EXTRA_LINKS = [
   { name: "Eventos Nacionales", url: "https://bniespanaslc.com/es/eventos", icon: <CalendarIcon className="w-4 h-4" /> },
   { name: "Eventos Regionales", url: "https://bniespanaslc.com/es/eventos", icon: <MapPin className="w-4 h-4" /> },
@@ -113,6 +120,7 @@ const CALENDAR_DATA = {
     { day: 5, name: 'Pasaporte 19:00', type: 'training' },
     { day: 6, name: 'Pasaporte 10:30', type: 'training' },
     { day: 7, name: 'Webinar Canarias 19:30', type: 'multi' },
+    { day: 11, name: 'CHAT GPT - Apoyo Miembros 18:00', type: 'special' },
     { day: 12, name: 'Pasaporte 19:00', type: 'multi' },
     { day: 13, name: 'Cert. Mentores 16:00', type: 'special' },
     { day: 14, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
@@ -516,6 +524,34 @@ const HubApp = () => {
                </div>
                <div className="absolute top-0 right-0 p-10 opacity-10 pointer-events-none">
                   <Users className="w-40 h-40 text-white" />
+               </div>
+            </a>
+          </section>
+
+          {/* FORMACION CHAT GPT */}
+          <section id="chat-gpt" className="mt-8">
+            <SectionTitle title="Formación Especial IA" />
+            <a href={CHAT_GPT_LINK.url} onClick={(e) => handleCopyLink(e, CHAT_GPT_LINK.url)} className="cursor-copy group relative block bg-[#10a37f] rounded-[2.5rem] p-8 lg:p-10 shadow-xl hover:-translate-y-1 transition-all">
+               <div className="relative z-10 flex flex-col gap-6">
+                  <div className="flex justify-between items-start">
+                     <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
+                        <Bot className="w-8 h-8" />
+                     </div>
+                     <span className="px-3 py-1 bg-white/20 text-white text-[9px] font-black tracking-widest uppercase rounded-full">Formación Práctica</span>
+                  </div>
+                  <div className="text-left">
+                     <h3 className="text-white font-black text-2xl mb-1">{CHAT_GPT_LINK.name}</h3>
+                     <p className="text-white/80 text-sm font-medium">{CHAT_GPT_LINK.description}</p>
+                  </div>
+                  <div className="flex items-center justify-between pt-4 border-t border-white/20">
+                     <div className="flex items-center gap-2 text-white font-black text-xs uppercase tracking-widest">
+                        <Clock size={14} className="text-white/70" /> {CHAT_GPT_LINK.time}
+                     </div>
+                     <ArrowRight className="text-white group-hover:translate-x-1 transition-transform" />
+                  </div>
+               </div>
+               <div className="absolute top-0 right-0 p-10 opacity-10 pointer-events-none">
+                  <Bot className="w-40 h-40 text-white" />
                </div>
             </a>
           </section>
