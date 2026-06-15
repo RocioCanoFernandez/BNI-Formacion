@@ -74,7 +74,7 @@ const EXTRA_LINKS = [
   { name: "Eventos Nacionales", url: "https://bniespanaslc.com/es/eventos", icon: <CalendarIcon className="w-4 h-4" /> },
   { name: "Eventos Regionales", url: "https://bniespanaslc.com/es/eventos", icon: <MapPin className="w-4 h-4" /> },
   { name: "Podcasts BNI", url: "https://www.somosbnipodcast.com/", icon: <Mic className="w-4 h-4" /> },
-  { name: "PEM Online Access", url: "https://bnionline.zoom.us/j/9305071108?omn=97355157197", icon: <GraduationCap className="w-4 h-4" /> },
+  { name: "PEM Online Access", url: "https://bnionline.zoom.us/j/97355157197", icon: <GraduationCap className="w-4 h-4" /> },
 ];
 
 const CALENDAR_DATA = {
@@ -143,6 +143,7 @@ const CALENDAR_DATA = {
     { day: 17, name: 'Pasaporte 10:30', type: 'training' },
     { day: 18, name: 'Webinar Canarias 19:30', type: 'special' },
     { day: 23, name: 'Pasaporte 19:00', type: 'training' },
+    { day: 24, name: 'PEM 18:00', type: 'pem' },
     { day: 25, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
     { day: 30, name: 'Pasaporte 19:00', type: 'multi' },
   ],
