@@ -158,12 +158,12 @@ const CALENDAR_DATA = {
     { day: 17, name: 'Foro Summer Event LPA', type: 'highlight' },
     { day: 21, name: 'Pasaporte 19:00', type: 'training' },
     { day: 23, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 28, name: 'Pasaporte 19:00', type: 'multi' },
+    { day: 28, name: 'Pasaporte 19:00', type: 'training' },
     { day: 29, name: 'Pasaporte 10:30', type: 'training' },
     { day: 30, name: 'Webinar Canarias 19:30', type: 'special' },
   ],
   7: [ // Agosto
-    { day: 4, name: 'PEM Online 16:00 / Pasaporte 19:00', type: 'multi' },
+    { day: 4, name: 'Pasaporte 19:00', type: 'training' },
     { day: 6, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
     { day: 13, name: 'Webinar Canarias 19:30', type: 'special' },
     { day: 20, name: 'Webinar Canarias 19:30', type: 'special' },
@@ -174,7 +174,7 @@ const CALENDAR_DATA = {
   8: [ // Septiembre
     { day: 1, name: 'Pasaporte 19:00', type: 'training' },
     { day: 3, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 8, name: 'PEM 16:00 / Pasaporte 19:00', type: 'multi' },
+    { day: 8, name: 'PEM 16:00 (Por confirmar) / Pasaporte 19:00', type: 'multi' },
     { day: 9, name: 'Pasaporte 10:30', type: 'training' },
     { day: 10, name: 'Webinar Canarias 19:30', type: 'multi' },
     { day: 15, name: 'Pasaporte 19:00', type: 'multi' },
