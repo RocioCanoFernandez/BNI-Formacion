@@ -353,6 +353,17 @@ const HubApp = () => {
               </div>
             </div>
 
+            {/* AVISO WEBINAR CANARIAS */}
+            <div className="mb-6 bg-amber-50 border border-amber-200 rounded-2xl p-4 flex gap-4 items-center shadow-sm">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
+                <Info size={20} />
+              </div>
+              <div className="text-left">
+                <p className="text-amber-900 text-[13px] font-black uppercase tracking-wide">Webinar de Canarias suspendido temporalmente</p>
+                <p className="text-amber-800/80 text-xs font-medium mt-1">Las sesiones se retomarán próximamente. Os avisaremos cuando haya nueva fecha.</p>
+              </div>
+            </div>
+
             <div className="bg-white rounded-[3rem] border border-gray-100 shadow-2xl overflow-hidden p-3 lg:p-6">
                <div className="grid grid-cols-7 mb-4">
                   {['L', 'M', 'X', 'J', 'V', 'S', 'D'].map(d => (
