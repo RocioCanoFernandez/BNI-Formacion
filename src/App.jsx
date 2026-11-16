@@ -78,155 +78,176 @@ const EXTRA_LINKS = [
 ];
 
 const CALENDAR_DATA = {
-  2: [ // Marzo
-    { day: 10, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 11, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 12, name: 'T. Mercado Objetivo 12:00', type: 'special' },
-    { day: 17, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 18, name: 'T. Pet. Específicas 17:00', type: 'special' },
-    { day: 19, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 24, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 25, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 26, name: 'Webinar Canarias 19:30', type: 'multi' },
-    { day: 27, name: 'PEM Online 11:00', type: 'pem' },
-  ],
-  3: [ // Abril
-    { day: 1, name: 'Semana Santa', type: 'holiday' },
-    { day: 2, name: 'Semana Santa', type: 'holiday' },
-    { day: 3, name: 'Semana Santa', type: 'holiday' },
-    { day: 4, name: 'Semana Santa', type: 'holiday' },
-    { day: 5, name: 'Semana Santa', type: 'holiday' },
-    { day: 6, name: 'Lunes de Pascua', type: 'holiday' },
-    { day: 7, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 8, name: 'Pasaporte 10:30', type: 'multi' },
-    { day: 9, name: 'Webinar Canarias 19:30', type: 'special' },
-    { day: 10, name: 'Cert. Mentores 12:00', type: 'special' },
-    { day: 14, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 16, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 20, name: 'PEM 16:00 / FERIA', type: 'pem' },
-    { day: 21, name: 'Pasaporte 19:00 / FERIA', type: 'multi' },
-    { day: 22, name: 'Pasaporte 10:30 / FERIA', type: 'training' },
-    { day: 23, name: 'Webinar Canarias 19:30 / FERIA', type: 'pem' },
-    { day: 24, name: 'FERIA', type: 'holiday' },
-    { day: 25, name: 'FERIA', type: 'holiday' },
-    { day: 26, name: 'FERIA', type: 'holiday' },
-    { day: 28, name: 'Pasaporte 19:00', type: 'multi' },
-    { day: 30, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-  ],
-  4: [ // Mayo
-    { day: 1, name: 'Fiesta del Trabajo', type: 'holiday' },
-    { day: 3, name: 'Día de la Madre', type: 'holiday' },
-    { day: 4, name: 'Taller Mercado Objetivo 19:00', type: 'training' },
-    { day: 5, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 6, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 7, name: 'Webinar Canarias 19:30', type: 'multi' },
-    { day: 11, name: 'CHAT GPT - Apoyo Miembros 18:00', type: 'special' },
-    { day: 12, name: 'Pasaporte 19:00', type: 'multi' },
-    { day: 13, name: 'Cert. Mentores 16:00', type: 'special' },
-    { day: 14, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 18, name: 'Taller Cómo Invitar 19:00', type: 'training' },
-    { day: 19, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 20, name: 'Pasaporte 10:30 / PEM Online 18:00', type: 'multi' },
-    { day: 21, name: 'Webinar Canarias 19:30', type: 'multi' },
-    { day: 26, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 28, name: 'Convención Nal. / Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 29, name: 'Convención Nacional', type: 'highlight' },
-  ],
-  5: [ // Junio
-    { day: 2, name: 'Cert. Mentores 12:00 / Pasaporte 19:00', type: 'multi' },
-    { day: 3, name: 'Pasaporte 10:30 / PEM 12:00', type: 'multi' },
-    { day: 4, name: 'Webinar Canarias 19:30', type: 'special' },
-    { day: 9, name: 'Pasaporte 19:00', type: 'multi' },
-    { day: 10, name: 'Cert. Mentores 12:00', type: 'multi' },
-    { day: 11, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 16, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 17, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 18, name: 'Webinar Canarias 19:30', type: 'special' },
-    { day: 23, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 24, name: 'PEM 18:00', type: 'pem' },
-    { day: 25, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 30, name: 'Pasaporte 19:00', type: 'multi' },
-  ],
-  6: [ // Julio
-    { day: 1, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 2, name: 'PEM 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 7, name: 'Cert. Mentores 12:00 / Pasaporte 19:00', type: 'multi' },
-    { day: 9, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 14, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 15, name: 'Pasaporte 10:30 / Foro ONe Summer', type: 'multi' },
-    { day: 16, name: 'Foro ONe Summer / Webinar Canarias 19:30', type: 'multi' },
-    { day: 17, name: 'Foro Summer Event LPA', type: 'highlight' },
-    { day: 21, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 23, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 28, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 29, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 30, name: 'Webinar Canarias 19:30', type: 'special' },
-  ],
-  7: [ // Agosto
-    { day: 4, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 6, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 13, name: 'Webinar Canarias 19:30', type: 'special' },
-    { day: 20, name: 'Webinar Canarias 19:30', type: 'special' },
-    { day: 25, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 26, name: 'Pasaporte 10:30', type: 'multi' },
-    { day: 27, name: 'Webinar Canarias 19:30', type: 'special' },
-  ],
-  8: [ // Septiembre
-    { day: 1, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 3, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 8, name: 'PEM 16:00 (Por confirmar) / Pasaporte 19:00', type: 'multi' },
-    { day: 9, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 10, name: 'Webinar Canarias 19:30', type: 'multi' },
-    { day: 15, name: 'Pasaporte 19:00', type: 'multi' },
-    { day: 17, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 22, name: 'Pasaporte 19:00', type: 'multi' },
-    { day: 23, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 24, name: 'Webinar Canarias 19:30', type: 'special' },
-    { day: 29, name: 'Pasaporte 19:00', type: 'multi' },
-  ],
-  9: [ // Octubre
-    { day: 1, name: 'EXPO BNI / Pasaporte 19:00 / Online', type: 'multi' },
-    { day: 2, name: 'EXPO BNI (LVS, ANDOCC) / PEM 16:00', type: 'multi' },
-    { day: 6, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 7, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 8, name: 'Webinar Canarias 19:30', type: 'multi' },
-    { day: 12, name: 'Fiesta Nacional', type: 'holiday' },
-    { day: 13, name: 'Pasaporte 19:00', type: 'multi' },
-    { day: 15, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 20, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 21, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 22, name: 'Webinar Canarias 19:30', type: 'special' },
-    { day: 27, name: 'Pasaporte 19:00', type: 'multi' },
-    { day: 29, name: 'Global Con. Pasaporte 16:00', type: 'multi' },
-  ],
-  10: [ // Noviembre
-    { day: 1, name: 'Todos los Santos', type: 'holiday' },
-    { day: 3, name: 'PEM 16:00 / Pasaporte 19:00', type: 'multi' },
-    { day: 4, name: 'Pasaporte 10:30 / Cert. Mentores', type: 'multi' },
-    { day: 5, name: 'Webinar Canarias 19:30', type: 'special' },
-    { day: 10, name: 'Pasaporte 19:00', type: 'multi' },
-    { day: 12, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 17, name: 'Pasaporte 19:00', type: 'multi' },
-    { day: 18, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 19, name: 'Webinar Canarias 19:30', type: 'multi' },
-    { day: 24, name: 'Mod A / Pasaporte 19:00', type: 'multi' },
-    { day: 26, name: 'Powercamp Pasaporte 16:00', type: 'multi' },
-  ],
-  11: [ // Diciembre
-    { day: 1, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 2, name: 'Pasaporte 10:30 / PEM 16:00', type: 'multi' },
-    { day: 3, name: 'Webinar Canarias 19:30', type: 'special' },
-    { day: 6, name: 'Día de la Constitución', type: 'holiday' },
-    { day: 8, name: 'Inmaculada Concepción', type: 'holiday' },
-    { day: 10, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
-    { day: 15, name: 'Cert. Mentores', type: 'special' },
-    { day: 16, name: 'Pasaporte 10:30', type: 'training' },
-    { day: 17, name: 'Webinar Canarias 19:30', type: 'special' },
-    { day: 22, name: 'Pasaporte 19:00', type: 'training' },
-    { day: 24, name: 'Nochebuena', type: 'holiday' },
-    { day: 25, name: 'Navidad', type: 'holiday' },
-    { day: 31, name: 'Nochevieja', type: 'holiday' },
-  ],
+  2026: {
+    2: [ // Marzo
+      { day: 10, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 11, name: 'Pasaporte 10:30', type: 'training' },
+      { day: 12, name: 'T. Mercado Objetivo 12:00', type: 'special' },
+      { day: 17, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 18, name: 'T. Pet. Específicas 17:00', type: 'special' },
+      { day: 19, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+      { day: 24, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 25, name: 'Pasaporte 10:30', type: 'training' },
+      { day: 26, name: 'Webinar Canarias 19:30', type: 'multi' },
+      { day: 27, name: 'PEM Online 11:00', type: 'pem' },
+    ],
+    3: [ // Abril
+      { day: 1, name: 'Semana Santa', type: 'holiday' },
+      { day: 2, name: 'Semana Santa', type: 'holiday' },
+      { day: 3, name: 'Semana Santa', type: 'holiday' },
+      { day: 4, name: 'Semana Santa', type: 'holiday' },
+      { day: 5, name: 'Semana Santa', type: 'holiday' },
+      { day: 6, name: 'Lunes de Pascua', type: 'holiday' },
+      { day: 7, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 8, name: 'Pasaporte 10:30', type: 'multi' },
+      { day: 9, name: 'Webinar Canarias 19:30', type: 'special' },
+      { day: 10, name: 'Cert. Mentores 12:00', type: 'special' },
+      { day: 14, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 16, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+      { day: 20, name: 'PEM 16:00 / FERIA', type: 'pem' },
+      { day: 21, name: 'Pasaporte 19:00 / FERIA', type: 'multi' },
+      { day: 22, name: 'Pasaporte 10:30 / FERIA', type: 'training' },
+      { day: 23, name: 'Webinar Canarias 19:30 / FERIA', type: 'pem' },
+      { day: 24, name: 'FERIA', type: 'holiday' },
+      { day: 25, name: 'FERIA', type: 'holiday' },
+      { day: 26, name: 'FERIA', type: 'holiday' },
+      { day: 28, name: 'Pasaporte 19:00', type: 'multi' },
+      { day: 30, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+    ],
+    4: [ // Mayo
+      { day: 1, name: 'Fiesta del Trabajo', type: 'holiday' },
+      { day: 3, name: 'Día de la Madre', type: 'holiday' },
+      { day: 4, name: 'Taller Mercado Objetivo 19:00', type: 'training' },
+      { day: 5, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 6, name: 'Pasaporte 10:30', type: 'training' },
+      { day: 7, name: 'Webinar Canarias 19:30', type: 'multi' },
+      { day: 11, name: 'CHAT GPT - Apoyo Miembros 18:00', type: 'special' },
+      { day: 12, name: 'Pasaporte 19:00', type: 'multi' },
+      { day: 13, name: 'Cert. Mentores 16:00', type: 'special' },
+      { day: 14, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+      { day: 18, name: 'Taller Cómo Invitar 19:00', type: 'training' },
+      { day: 19, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 20, name: 'Pasaporte 10:30 / PEM Online 18:00', type: 'multi' },
+      { day: 21, name: 'Webinar Canarias 19:30', type: 'multi' },
+      { day: 26, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 28, name: 'Convención Nal. / Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+      { day: 29, name: 'Convención Nacional', type: 'highlight' },
+    ],
+    5: [ // Junio
+      { day: 2, name: 'Cert. Mentores 12:00 / Pasaporte 19:00', type: 'multi' },
+      { day: 3, name: 'Pasaporte 10:30 / PEM 12:00', type: 'multi' },
+      { day: 4, name: 'Webinar Canarias 19:30', type: 'special' },
+      { day: 9, name: 'Pasaporte 19:00', type: 'multi' },
+      { day: 10, name: 'Cert. Mentores 12:00', type: 'multi' },
+      { day: 11, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+      { day: 16, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 17, name: 'Pasaporte 10:30', type: 'training' },
+      { day: 18, name: 'Webinar Canarias 19:30', type: 'special' },
+      { day: 23, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 24, name: 'PEM 18:00', type: 'pem' },
+      { day: 25, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+      { day: 30, name: 'Pasaporte 19:00', type: 'multi' },
+    ],
+    6: [ // Julio
+      { day: 1, name: 'Pasaporte 10:30', type: 'training' },
+      { day: 2, name: 'PEM 16:00 / Webinar Canarias 19:30', type: 'multi' },
+      { day: 7, name: 'Cert. Mentores 12:00 / Pasaporte 19:00', type: 'multi' },
+      { day: 9, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+      { day: 14, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 15, name: 'Pasaporte 10:30 / Foro ONe Summer', type: 'multi' },
+      { day: 16, name: 'Foro ONe Summer / Webinar Canarias 19:30', type: 'multi' },
+      { day: 17, name: 'Foro Summer Event LPA', type: 'highlight' },
+      { day: 21, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 23, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+      { day: 28, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 29, name: 'Pasaporte 10:30', type: 'training' },
+      { day: 30, name: 'Webinar Canarias 19:30', type: 'special' },
+    ],
+    7: [ // Agosto
+      { day: 4, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 6, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+      { day: 13, name: 'Webinar Canarias 19:30', type: 'special' },
+      { day: 20, name: 'Webinar Canarias 19:30', type: 'special' },
+      { day: 25, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 26, name: 'Pasaporte 10:30', type: 'multi' },
+      { day: 27, name: 'Webinar Canarias 19:30', type: 'special' },
+    ],
+    8: [ // Septiembre
+      { day: 1, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 3, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+      { day: 8, name: 'PEM 16:00 (Por confirmar) / Pasaporte 19:00', type: 'multi' },
+      { day: 9, name: 'Pasaporte 10:30', type: 'training' },
+      { day: 10, name: 'Webinar Canarias 19:30', type: 'multi' },
+      { day: 15, name: 'Pasaporte 19:00', type: 'multi' },
+      { day: 17, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+      { day: 22, name: 'Pasaporte 19:00', type: 'multi' },
+      { day: 23, name: 'Pasaporte 10:30', type: 'training' },
+      { day: 24, name: 'Webinar Canarias 19:30', type: 'special' },
+      { day: 29, name: 'Pasaporte 19:00', type: 'multi' },
+    ],
+    9: [ // Octubre
+      { day: 1, name: 'EXPO BNI / Pasaporte 19:00 / Online', type: 'multi' },
+      { day: 2, name: 'EXPO BNI (LVS, ANDOCC) / PEM 16:00', type: 'multi' },
+      { day: 6, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 7, name: 'Pasaporte 10:30', type: 'training' },
+      { day: 8, name: 'Webinar Canarias 19:30', type: 'multi' },
+      { day: 12, name: 'Fiesta Nacional', type: 'holiday' },
+      { day: 13, name: 'Pasaporte 19:00', type: 'multi' },
+      { day: 15, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+      { day: 20, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 21, name: 'Pasaporte 10:30', type: 'training' },
+      { day: 22, name: 'Webinar Canarias 19:30', type: 'special' },
+      { day: 27, name: 'Pasaporte 19:00', type: 'multi' },
+      { day: 29, name: 'Global Con. Pasaporte 16:00', type: 'multi' },
+    ],
+    10: [ // Noviembre
+      { day: 1, name: 'Todos los Santos', type: 'holiday' },
+      { day: 3, name: 'PEM 16:00 / Pasaporte 19:00', type: 'multi' },
+      { day: 4, name: 'Pasaporte 10:30 / Cert. Mentores', type: 'multi' },
+      { day: 5, name: 'Webinar Canarias 19:30', type: 'special' },
+      { day: 10, name: 'Pasaporte 19:00', type: 'multi' },
+      { day: 12, name: 'Pasaporte 16:00 / Webinar Canarias 19:30', type: 'multi' },
+      { day: 17, name: 'T. Mercado Obj. 9:30 / T. Pet. Específicas 16:00 / Pasaporte 19:00', type: 'multi' },
+      { day: 18, name: 'Pasaporte 10:30', type: 'training' },
+      { day: 19, name: 'Webinar Canarias 19:30', type: 'multi' },
+      { day: 24, name: 'Mod A / Pasaporte 19:00', type: 'multi' },
+      { day: 25, name: 'T. Esferas de Contacto 16:00', type: 'training' },
+      { day: 26, name: 'Powercamp Pasaporte 16:00', type: 'multi' },
+    ],
+    11: [ // Diciembre
+      { day: 1, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 2, name: 'Pasaporte 10:30', type: 'training' },
+      { day: 6, name: 'Día de la Constitución', type: 'holiday' },
+      { day: 8, name: 'Inmaculada Concepción', type: 'holiday' },
+      { day: 9, name: 'T. Mercado Objetivo 17:00', type: 'training' },
+      { day: 10, name: 'Pasaporte 16:00', type: 'training' },
+      { day: 15, name: 'Pasaporte 19:00 / Cert. Mentores', type: 'multi' },
+      { day: 16, name: 'Pasaporte 10:30 / BNI Connect 12:00', type: 'multi' },
+      { day: 17, name: 'T. 1a1 17:00', type: 'training' },
+      { day: 18, name: 'Cena de empresa', type: 'highlight' },
+      { day: 22, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 24, name: 'Nochebuena', type: 'holiday' },
+      { day: 25, name: 'Navidad', type: 'holiday' },
+      { day: 31, name: 'Nochevieja', type: 'holiday' },
+    ],
+  },
+  2027: {
+    0: [ // Enero
+      { day: 1, name: 'Año Nuevo', type: 'holiday' },
+      { day: 5, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 6, name: 'Día de Reyes', type: 'holiday' },
+      { day: 7, name: 'Pasaporte 16:00', type: 'training' },
+      { day: 12, name: 'Pasaporte 19:00 / PEM', type: 'multi' },
+      { day: 13, name: 'Pasaporte 10:30', type: 'training' },
+      { day: 14, name: 'T. Mercado Objetivo 16:00', type: 'training' },
+      { day: 19, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 20, name: 'T. Pet. Específicas 16:00', type: 'training' },
+      { day: 21, name: 'Pasaporte 16:00', type: 'training' },
+      { day: 26, name: 'Pasaporte 19:00', type: 'training' },
+      { day: 27, name: 'Pasaporte 10:30', type: 'training' },
+      { day: 28, name: 'T. Planificación de metas 16:00', type: 'training' },
+    ],
+  }
 };
 
 // --- COMPONENTES ---
@@ -253,29 +274,52 @@ const HubApp = () => {
   };
 
   const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth());
-  const [selectedYear] = useState(2026);
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const [isSearching, setIsSearching] = useState(false);
   const [activeDay, setActiveDay] = useState(null); // Para ver detalles en móvil
 
-  // Lógica de Calendario Dinámico (Alineación corregida)
+  // Lógica de Calendario Dinámico (Alineación corregida y multi-año)
   const calendarCells = useMemo(() => {
     const firstDay = new Date(selectedYear, selectedMonth, 1).getDay(); // 0=Dom, 1=Lun...
     const startOffset = firstDay === 0 ? 6 : firstDay - 1; // Alineación a Lunes
     const daysInMonth = new Date(selectedYear, selectedMonth + 1, 0).getDate();
     
+    const monthData = (CALENDAR_DATA[selectedYear] && CALENDAR_DATA[selectedYear][selectedMonth])
+      ? CALENDAR_DATA[selectedYear][selectedMonth]
+      : (CALENDAR_DATA[selectedMonth] || []);
+
     const cells = [];
     for (let i = 0; i < startOffset; i++) {
         cells.push({ day: null });
     }
     for (let i = 1; i <= daysInMonth; i++) {
-      const event = (CALENDAR_DATA[selectedMonth] || []).find(e => e.day === i);
+      const event = monthData.find(e => e.day === i);
       cells.push({ day: i, event });
     }
     return cells;
   }, [selectedMonth, selectedYear]);
 
-  const nextMonth = () => { setSelectedMonth((m) => (m + 1) % 12); setActiveDay(null); };
-  const prevMonth = () => { setSelectedMonth((m) => (m - 1 + 12) % 12); setActiveDay(null); };
+  const nextMonth = () => {
+    setSelectedMonth((m) => {
+      if (m === 11) {
+        setSelectedYear((y) => y + 1);
+        return 0;
+      }
+      return m + 1;
+    });
+    setActiveDay(null);
+  };
+
+  const prevMonth = () => {
+    setSelectedMonth((m) => {
+      if (m === 0) {
+        setSelectedYear((y) => y - 1);
+        return 11;
+      }
+      return m - 1;
+    });
+    setActiveDay(null);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 text-slate-800 font-sans pb-12">
@@ -320,7 +364,15 @@ const HubApp = () => {
               {MONTHS.map((m, idx) => (
                 <button 
                   key={m}
-                  onClick={() => { setSelectedMonth(idx); setIsSearching(false); }}
+                  onClick={() => { 
+                    setSelectedMonth(idx); 
+                    if (idx === 0 && selectedYear === 2026 && selectedMonth >= 10) {
+                      setSelectedYear(2027);
+                    } else if (idx >= 2 && selectedYear === 2027) {
+                      setSelectedYear(2026);
+                    }
+                    setIsSearching(false); 
+                  }}
                   className={`px-4 py-2 rounded-xl text-xs font-black uppercase tracking-widest transition-all ${
                     selectedMonth === idx ? 'bg-[#cf202e] text-white' : 'bg-gray-50 text-gray-400 hover:bg-red-50'
                   }`}
@@ -388,10 +440,10 @@ const HubApp = () => {
                                    const evName = cell.event.name || "";
                                    const evType = cell.event.type || "";
                                    
-                                   const isHoliday = evType === 'holiday' || /Feria|Semana Santa|Pascua|Fiesta|Madre|Nacional|Navidad|Nochebuena|Nochevieja|Inmaculada|Constitución|Todos los Santos/i.test(evName);
-                                   const isTraining = /Pasaporte|Webinar|Formación|Mentores|Taller/i.test(evName);
+                                   const isHoliday = evType === 'holiday' || /Feria|Semana Santa|Pascua|Fiesta|Madre|Nacional|Navidad|Nochebuena|Nochevieja|Inmaculada|Constitución|Todos los Santos|Año Nuevo|Reyes/i.test(evName);
+                                   const isTraining = /Pasaporte|Webinar|Formación|Mentores|Taller|T\.|Mercado|Pet\.|Esferas|1a1|Metas|Planificación/i.test(evName);
                                    const isPem = /PEM/i.test(evName);
-                                   const isEvent = /Connect|Convención|Foro|EXPO|Global|Powercamp|Mod A|Market|Networking|DAS-CONECTA|Cena/i.test(evName) || (evType === 'highlight' && !isHoliday && !isTraining && !isPem && !/Mercado Obj/i.test(evName));
+                                   const isEvent = /Cena|Connect|Convención|Foro|EXPO|Global|Powercamp|Mod A|Market|Networking|DAS-CONECTA/i.test(evName) || (evType === 'highlight' && !isHoliday && !isTraining && !isPem && !/Mercado Obj/i.test(evName));
                                    
                                    let dots = [];
                                    if (isTraining) dots.push('bg-[#cf202e]'); // Rojo
