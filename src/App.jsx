@@ -16,7 +16,10 @@ import {
   Mic,
   MonitorPlay,
   Search,
-  Info
+  Info,
+  CreditCard,
+  Ticket,
+  Receipt
 } from 'lucide-react';
 
 // --- CONFIGURACIÓN DE CONTENIDO ---
@@ -71,6 +74,7 @@ const CHAT_GPT_LINK = {
 };
 
 const EXTRA_LINKS = [
+  { name: "Área de Clientes y Pagos", url: "https://admin.albanegreira.com/andocc-networking-s-l/AreaClienteAcceso", icon: <CreditCard className="w-4 h-4" /> },
   { name: "Eventos Nacionales", url: "https://bniespanaslc.com/es/eventos", icon: <CalendarIcon className="w-4 h-4" /> },
   { name: "Eventos Regionales", url: "https://bniespanaslc.com/es/eventos", icon: <MapPin className="w-4 h-4" /> },
   { name: "Podcasts BNI", url: "https://www.somosbnipodcast.com/", icon: <Mic className="w-4 h-4" /> },
@@ -213,6 +217,7 @@ const CALENDAR_DATA = {
       { day: 24, name: 'Mod A / Pasaporte 19:00', type: 'multi' },
       { day: 25, name: 'T. Esferas de Contacto 16:00', type: 'training' },
       { day: 26, name: 'Powercamp Pasaporte 16:00', type: 'multi' },
+      { day: 27, name: 'Gala de Navidad ANDOCC', type: 'highlight' },
     ],
     11: [ // Diciembre
       { day: 1, name: 'Pasaporte 19:00', type: 'training' },
@@ -224,7 +229,6 @@ const CALENDAR_DATA = {
       { day: 15, name: 'Pasaporte 19:00 / Cert. Mentores', type: 'multi' },
       { day: 16, name: 'Pasaporte 10:30 / BNI Connect 12:00', type: 'multi' },
       { day: 17, name: 'T. 1a1 17:00', type: 'training' },
-      { day: 18, name: 'Cena de empresa', type: 'highlight' },
       { day: 22, name: 'Pasaporte 19:00', type: 'training' },
       { day: 24, name: 'Nochebuena', type: 'holiday' },
       { day: 25, name: 'Navidad', type: 'holiday' },
@@ -443,7 +447,7 @@ const HubApp = () => {
                                    const isHoliday = evType === 'holiday' || /Feria|Semana Santa|Pascua|Fiesta|Madre|Nacional|Navidad|Nochebuena|Nochevieja|Inmaculada|Constitución|Todos los Santos|Año Nuevo|Reyes/i.test(evName);
                                    const isTraining = /Pasaporte|Webinar|Formación|Mentores|Taller|T\.|Mercado|Pet\.|Esferas|1a1|Metas|Planificación/i.test(evName);
                                    const isPem = /PEM/i.test(evName);
-                                   const isEvent = /Cena|Connect|Convención|Foro|EXPO|Global|Powercamp|Mod A|Market|Networking|DAS-CONECTA/i.test(evName) || (evType === 'highlight' && !isHoliday && !isTraining && !isPem && !/Mercado Obj/i.test(evName));
+                                   const isEvent = /Cena|Gala|Connect|Convención|Foro|EXPO|Global|Powercamp|Mod A|Market|Networking|DAS-CONECTA/i.test(evName) || (evType === 'highlight' && !isHoliday && !isTraining && !isPem && !/Mercado Obj/i.test(evName));
                                    
                                    let dots = [];
                                    if (isTraining) dots.push('bg-[#cf202e]'); // Rojo
@@ -617,6 +621,57 @@ const HubApp = () => {
                   <Bot className="w-40 h-40 text-white" />
                </div>
             </a>
+          </section>
+
+          {/* ÁREA DE CLIENTES Y PAGOS (DEPARTAMENTO DE GESTIÓN) */}
+          <section id="area-clientes" className="mt-8">
+            <SectionTitle title="Área de Clientes y Pagos" subtitle="Entradas, facturación y soporte BNI ANDOCC" />
+            <div className="bg-white rounded-[2.5rem] border border-gray-100 shadow-xl overflow-hidden p-8 lg:p-10 text-left relative group hover:shadow-2xl transition-all">
+              <div className="flex flex-col gap-6 relative z-10">
+                <div className="flex items-center justify-between">
+                  <div className="w-14 h-14 rounded-2xl bg-[#cf202e]/10 text-[#cf202e] flex items-center justify-center">
+                    <CreditCard className="w-7 h-7" />
+                  </div>
+                  <span className="px-3 py-1 bg-red-50 text-[#cf202e] text-[9px] font-black uppercase tracking-widest rounded-full border border-red-100">
+                    Portal Oficial
+                  </span>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-black text-slate-900 mb-2">
+                    Portal del Miembro & Gestión
+                  </h3>
+                  <p className="text-slate-500 text-xs leading-relaxed font-medium">
+                    Espacio unificado donde puedes adquirir tus entradas para eventos (como la Gala de Navidad), abonar formaciones, consultar y descargar todas tus facturas de empresa y abrir tickets de soporte.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
+                  <div className="flex items-center gap-2 p-2.5 rounded-2xl bg-gray-50 border border-gray-100 text-slate-700">
+                    <Ticket className="w-4 h-4 text-[#cf202e] shrink-0" />
+                    <span className="text-[11px] font-bold">Entradas & Gala</span>
+                  </div>
+                  <div className="flex items-center gap-2 p-2.5 rounded-2xl bg-gray-50 border border-gray-100 text-slate-700">
+                    <Receipt className="w-4 h-4 text-[#cf202e] shrink-0" />
+                    <span className="text-[11px] font-bold">Facturas</span>
+                  </div>
+                  <div className="flex items-center gap-2 p-2.5 rounded-2xl bg-gray-50 border border-gray-100 text-slate-700">
+                    <HelpCircle className="w-4 h-4 text-[#cf202e] shrink-0" />
+                    <span className="text-[11px] font-bold">Tickets Soporte</span>
+                  </div>
+                </div>
+
+                <a 
+                  href="https://admin.albanegreira.com/andocc-networking-s-l/AreaClienteAcceso" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="mt-2 w-full py-4 px-6 bg-[#cf202e] hover:bg-[#b01b26] text-white rounded-2xl font-black text-xs uppercase tracking-widest flex items-center justify-center gap-3 shadow-lg shadow-red-200 transition-all hover:scale-[1.01]"
+                >
+                  <span>Acceder al Área de Clientes</span>
+                  <ExternalLink size={16} />
+                </a>
+              </div>
+            </div>
           </section>
 
           {/* OTROS LINKS */}
